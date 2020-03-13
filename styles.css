@@ -1,0 +1,879 @@
+
+@font-face {
+    font-family: 'Geometria-Medium';
+    src: url('fonts/Geometria/Geometria-Medium.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria-HeavyItalic';
+    src: url('fonts/Geometria/Geometria-HeavyItalic.otf') format('otf');
+
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Geometria-Regular';
+    src: url('fonts/Geometria/Geometria.otf') format('otf');
+
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria-Heavy';
+    src: url('fonts/Geometria/Geometria-Heavy.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria-Light';
+    src: url('fonts/Geometria/Geometria-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Geometria-LightItalic';
+    src: url('fonts/Geometria/Geometria-LightItalic.otf') format('otf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Philosopher-Regular';
+    src: url('fonts/Philosopher/Philosopher-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Philosopher-Italic';
+    src: url('fonts/Philosopher/Philosopher-Italic.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Philosopher-Bold';
+    src: url('fonts/Philosopher/Philosopher-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    font-family: roboto, Arial, sans-serif;
+    font-size: 16px;
+}
+.container {
+    max-width: 1440px;
+    min-width: 320px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.header {
+    width: 1440px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo {
+    position: absolute;
+    top: 34px;
+    left: 34px;
+    display: block;
+}
+.header-menu {
+    position: absolute;
+    top: 100px;
+    right: 80px;
+    cursor: pointer;
+    width: 54px;
+    height: 54px;
+    background-image: url("img/Group 2.png");
+}
+.header-figure {
+    position: absolute;
+    top: 266px;
+    left: 349px;
+    z-index: 1;
+}
+.header-figure__text {
+    position: absolute;
+    transform: rotate(270deg);
+    font-family: Philosopher-Italic;
+    font-size: 9px;
+    font-style: italic;
+    bottom: 58px;
+    left: -62px;
+    color: #77701B;
+}
+.header__text {
+    display: none;
+}
+.header-rectangle {
+    position: absolute;
+    width: 138px;
+    height: 383px;
+    background-color: #F7E611;
+    top: 256px;
+    right: 278px;
+}
+.arrow-left {
+    position: absolute;
+    bottom: 119px;
+    left: -40px;
+    width: 20px;
+    height: 36px;
+    cursor: pointer;
+    background-image: url("img/arrow.png");
+    z-index: 10;
+}
+.arrow-right {
+    position: absolute;
+    bottom: 119px;
+    right: -40px;
+    width: 20px;
+    height: 36px;
+    cursor: pointer;
+    background-image: url("img/arrow.png");
+    transform: rotate(180deg);
+    z-index: 10;
+}
+.header__delta-contour {
+    display: none;
+}
+.header-rectangle__letter-G {
+    font-family: Geometria-Medium;
+    font-size: 80px;
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    top: -53px;
+    left: 40px;
+    z-index: -1;
+}
+.header-rectangle__number-13 {
+    position: absolute;
+    left: 24px;
+    bottom: 40px;
+    font-family: Geometria-HeavyItalic;
+    height: 45px;
+    font-size: 45px;
+    letter-spacing: 4px;
+    color: #000000;
+}
+.header-rectangle__dash {
+    position: absolute;
+    right: -16px;
+    bottom: 2px;
+    height: 45px;
+    width: 17px;
+    border-bottom: 3px solid black;
+}
+.header-rectangle__number-7 {
+    position: absolute;
+    right: -15px;
+    bottom: -21px;
+    width: 17px;
+    font-family: Geometria-HeavyItalic;
+    font-size: 17px;
+    color: #000000;
+}
+.header-title {
+    font-family: Philosopher-Regular;
+    font-size: 140px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 45px;
+    position: relative;
+    z-index: 2;
+    transition: .8s all;
+    margin-left: 37px;
+}
+.header-letter-A {
+    font-family: Geometria-Medium;
+    font-size: 80px;
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    top: 43px;
+    right: 406px;
+    z-index: 2;
+}
+.slide-1__letter-E {
+    display: none;
+}
+.main {
+    width: 100%;
+}
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.back__letter-E {
+    font-family: Geometria-Medium;
+    font-size: 80px;
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1px #000000;
+    top: 125px;
+    right: 221px;
+}
+.back__delta-black {
+    display: none;
+}
+.back-figure {
+    display: none;
+}
+.back__rectangle-big {
+    width: 720px;
+    height: 800px;
+    position: relative;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0) 20%);
+}
+.rectangle-big__text {
+    position: absolute;
+    font-family: Geometria-LightItalic;
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(0,0,0,0.4);
+    transform: rotate(270deg);
+    left: -20px;
+    top: 388px;
+}
+.back__rectangle-small {
+    width: 600px;
+    height: 616px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-box-shadow: -10px 0px 5px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: -10px 0px 5px 0px rgba(0,0,0,0.11);
+    box-shadow: -30px 0px 30px 0px rgba(0,0,0,0.11);
+}
+.middle {
+    width: 1280px;
+    height: 577px;
+    position: absolute;
+    top: 97px;
+    left: 80px;
+    z-index: 2;
+}
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.slide-0 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    transition: all 1s ease;
+    -webkit-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    -moz-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.11);
+
+    width: 860px;
+    height: 490px;
+    background: url("img/photo-1535086181678-5a5c4d23aa7d.jpg"), rgba(247, 230, 17, 0.8);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.slide-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    transition: all 1s ease;
+    -webkit-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    -moz-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.11);
+
+    width: 800px;
+    height: 525px;
+    background:  url("img/kaboompics_Arc de la Rua Augusta in Lisbon, Portugal.jpg") rgba(247, 230, 17, 0.8);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.slide-2 {
+    position: absolute;
+    left: 0;
+    top: -600px;
+    z-index: 0;
+    opacity: 0;
+
+    transition: all 1s ease;
+    -webkit-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    -moz-box-shadow: 30px 30px 30px 30px rgba(0,0,0,0.11);
+    box-shadow: 10px 10px 30px 5px rgba(0,0,0,0.11);
+
+
+    background:  url("img/kaboompics_Modern white building, EDP Headquarters of architect Aires Mateus, Lisbon, Portugal.jpg") rgba(247, 230, 17, 0.8);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+.slide-1__letter-G {
+    display: none;
+}
+.slide-1__number-1 {
+    font-family: Geometria-Light;
+    position: absolute;
+    font-size: 14px;
+    left: 143px;
+    top: 84px;
+}
+.slide-1__number-3 {
+     font-family: Geometria-Light;
+     position: absolute;
+     font-size: 14px;
+     left: 143px;
+     top: 164px;
+ }
+.slide-1__number-51 {
+    font-family: Geometria-Heavy;
+    position: absolute;
+    font-size: 28px;
+    left: 477px;
+    top: 29px;
+    transform: rotate(270deg);
+    letter-spacing: 5px;
+}
+.slide-0__img {
+    display: none;
+}
+.slide-0__title {
+    font-family: Geometria-Regular;
+    position: absolute;
+    font-size: 17px;
+    left: 86px;
+    top: 32px;
+    width: 98px;
+    height: 98px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invisible {
+    display: none;
+}
+.footer {
+    width: 100%;
+    height: 218px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left {
+    position: relative;
+    width: 613px;
+    height: 100%;
+}
+.footer-left__decor {
+    position: absolute;
+    font-family: Philosopher-Bold;
+    font-size: 25px;
+    color: #000000;
+}
+.footer-left__delta-black {
+    position: absolute;
+    width: 23px;
+    height: 32px;
+    background: url("img/delta-black.png") no-repeat;
+    bottom: 75px;
+    left: 192px;
+}
+.letter-a {
+    bottom: 30px;
+    left: 267px;
+}
+.letter-f1 {
+    bottom: 65px;
+    left: 332px;
+}
+.letter-f2 {
+    bottom: 21px;
+    left: 396px;
+}
+.letter-i {
+    bottom: 49px;
+    left: 455px;
+}
+.letter-n{
+    bottom: 9px;
+    left: 521px;
+}
+.footer-left__delta-contour {
+    position: absolute;
+    width: 23px;
+    height: 32px;
+    background: url("img/delta-contour.png") no-repeat;
+    bottom: -15px;
+    left: 451px;
+}
+.footer__center {
+    width: 213px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.footer-center__img-top {
+    background-image: url("img/Mask Group 1.png");
+    width: 213px;
+    height: 124px;
+}
+.footer-center__img-bottom {
+    width: 213px;
+    height: 10px;
+    background-color: #F7E611;
+}
+.footer-right {
+    position: relative;
+    width: 613px;
+    height: 100%;
+}
+.footer-right__decor {
+    position: absolute;
+    font-family: Philosopher-Bold;
+    font-size: 25px;
+    color: #000000;
+}
+.footer-right__delta-black {
+    position: absolute;
+    width: 23px;
+    height: 32px;
+    background: url("img/delta-black.png") no-repeat;
+    bottom: 34px;
+    right: 200px;
+}
+.letter-A {
+    bottom: 51px;
+    right: 476px;
+}
+.letter-G {
+    display: inline-block;
+    width: 25px;
+    box-sizing: border-box;
+    background: url("img/letter-shadow.png") 90% 80% no-repeat;
+    bottom: 44px;
+    right: 375px;
+    text-align: end;
+}
+.letter-E {
+    bottom: 17px;
+    right: 266px;
+}
+.footer-right__delta-contour {
+    position: absolute;
+    width: 23px;
+    height: 32px;
+    background: url("img/delta-contour.png") no-repeat;
+    bottom: 15px;
+    right: 435px;
+}
+@media (max-width: 1439px) {
+    .back__rectangle-big {
+        width: 50%;
+    }
+    .middle {
+        width: 89%;
+        left: 5%;
+    }
+    .header {
+        width: 100%;
+    }
+    .header-logo {
+        left: 3%;
+
+    }
+    .header-menu {
+        right: 6%;
+    }
+    .back__rectangle-small {
+        width: 83%;
+    }
+    .header-letter-A {
+        right: 26%;
+    }
+    .header-title {
+        font-size: 120px;
+        letter-spacing: 40px;
+    }
+    .slide-0 {
+        width: 68%;
+    }
+}
+@media (max-width: 1400px) {
+    .header-figure {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .middle {
+        position: static;
+        width: 84%;
+        margin: 97px auto 0 auto;
+    }
+    .slide-1 {
+        width: 100%;
+    }
+    .slide-1__number-1 {
+        font-family: Geometria-Light;
+        position: absolute;
+        font-size: 14px;
+        left: 143px;
+        top: 84px;
+    }
+    .slide-1__number-3 {
+        display: none;
+    }
+    .slide-1__number-1 {
+       display: none;
+    }
+    .slide-0 {
+        width: 100%;
+    }
+    .back__rectangle-small {
+        display: none;
+    }
+    .header-menu {
+        top: 34px;
+        right: 34px;
+        width: 54px;
+        height: 54px;
+    }
+    .header-title {
+        font-size: 100px;
+        letter-spacing: 30px;
+    }
+    .footer-left__delta-black {
+        bottom: 75px;
+        left: 152px;
+    }
+    .letter-a {
+        bottom: 30px;
+        left: 217px;
+    }
+    .letter-f1 {
+        bottom: 65px;
+        left: 282px;
+    }
+    .letter-f2 {
+        bottom: 21px;
+        left: 336px;
+    }
+    .letter-i {
+        bottom: 49px;
+        left: 425px;
+    }
+    .letter-n{
+        bottom: 9px;
+        left: 461px;
+    }
+    .footer-left__delta-contour {
+        display: none;
+    }
+    .footer-right__delta-black {
+        right: 150px;
+    }
+    .letter-A {
+        bottom: 51px;
+        right: 446px;
+    }
+    .letter-G {
+        bottom: 44px;
+        right: 325px;
+    }
+    .letter-E {
+        bottom: 17px;
+        right: 216px;
+    }
+    .footer-right__delta-contour {
+        right: 376px;
+    }
+}
+@media (max-width: 1300px) {
+    .header-letter-A {
+        right: 35%;
+        top: 100px
+    }
+    .slide-1__number-51 {
+        left: 35%;
+    }
+}
+@media (max-width: 970px) {
+    .footer {
+        display: none;
+    }
+    .container {
+        height: 750px;
+    }
+}
+@media (max-width: 890px) {
+    .header-title {
+        font-size: 80px;
+        letter-spacing: 30px;
+    }
+    .header-letter-A {
+        font-size: 70px;
+    }
+    .header-rectangle__letter-G {
+        font-size: 70px;
+    }
+}
+@media (max-width: 800px) {
+    .header-title {
+        font-size: 70px;
+        letter-spacing: 20px;
+    }
+    .header-letter-A {
+        font-size: 60px;
+    }
+    .header-rectangle__letter-G {
+        font-size: 60px;
+        left: -100px;
+    }
+
+    .slide-0__title {
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+    .header-title {
+        font-size: 60px;
+        letter-spacing: 20px;
+    }
+}
+@media (max-width: 599px) {
+    .container {
+        height: auto;
+    }
+    .middle {
+        width: 100%;
+    }
+    .header-title {
+        display: none;
+    }
+    .back {
+        background-color: #F7E611;
+    }
+    .back__rectangle-big {
+        display: none;
+    }
+    .header-menu {
+        background: url("img/Group 3.png") no-repeat;
+        width: 20px;
+        height: 14px;
+    }
+    .header-figure {
+        display: none;
+    }
+    .slide-1 {
+        width: 380px;
+        height: 247px;
+    }
+    .slide-0 {
+        width: 599px;
+        height: 359px;
+    }
+    .header-rectangle {
+        width: 148px;
+        height: 148px;
+        transform: rotate(45deg);
+        top: calc(100% - 75px);
+        right: -74px;
+    }
+    .header-rectangle__number-13 {
+        left: 14px;
+        bottom: 70px;
+        height: 20px;
+        font-size: 20px;
+        letter-spacing: 4px;
+        color: #000000;
+        transform: rotate(-45deg);
+    }
+    .header-rectangle__dash {
+       display: none;
+    }
+    .header-rectangle__number-7 {
+       display: none;
+    }
+    .arrow-left{
+        bottom: -50px;
+        left: -300px;
+        transform: rotate(-45deg);
+    }
+    .arrow-right {
+        bottom: 150px;
+        left: -105px;
+        width: 20px;
+        transform: rotate(135deg);
+    }
+    .header-rectangle__letter-G {
+        display: none;
+    }
+    .slide-1__letter-G {
+        display: block;
+        font-family: Geometria-Medium;
+        font-size: 60px;
+        position: absolute;
+        color: transparent;
+        -webkit-text-stroke: 1px #000000;
+        top: 180px;
+        left: 160px;
+        z-index: -1;
+    }
+    .header__img {
+        display: block;
+        background-image: url("img/path30.png");
+        width: 109px;
+        height: 109px;
+        position: absolute;
+        left: calc(50% - 54px);
+        bottom: -54px;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        width: 320px;
+        height: 600px;
+    }
+    .main {
+        height: auto;
+    }
+    .header-menu {
+        top: 24px;
+        right: 24px;
+        width: 20px;
+        height: 14px;
+    }
+    .header-logo {
+        top: 24px;
+        left: 24px;
+    }
+    .header-figure {
+        display: none;
+    }
+    .back-figure {
+        display: block;
+        transform: rotate(90deg);
+        position: relative;
+    }
+    .back-figure img {
+        position: absolute;
+        left: 130px;
+        bottom: 0;
+    }
+    .header-figure__text {
+        display: none;
+    }
+    .header__text {
+        display: inline;
+        white-space: nowrap;
+        position: absolute;
+        transform: rotate(270deg);
+        font-family: Philosopher-Italic;
+        font-size: 9px;
+        font-style: italic;
+        top: 300px;
+        left: -10px;
+        color: #77701B;
+    }
+    .middle {
+        margin-top: 100px;
+        height: 500px;
+    }
+    .slide-1 {
+        width: 280px;
+        height: 184px;
+        background:  url("img/kaboompics_Arc de la Rua Augusta in Lisbon, Portugal.jpg") no-repeat  rgba(206, 203, 35, 0.91);
+        left: -44px;
+        background-size: 100% 100%;
+
+    }
+    .slide-0 {
+        width: 558px;
+        height: 318px;
+        background: url("img/photo-1535086181678-5a5c4d23aa7d.jpg") no-repeat rgba(210, 253, 116, 0.51);
+        background-size: 110% 110%;
+        filter: sepia(50%);
+    }
+    .slide-1__number-51 {
+        display: none;
+    }
+    .slide-1__letter-G {
+        display: block;
+        font-family: Geometria-Medium;
+        font-size: 60px;
+        position: absolute;
+        color: transparent;
+        -webkit-text-stroke: 1px #000000;
+        top: 140px;
+        left: 200px;
+        z-index: -1;
+    }
+    .header-letter-A {
+        font-size: 60px;
+        top: 250px;
+        right: 200px;
+    }
+    .slide-1__letter-E {
+        display: block;
+        position: absolute;
+        font-family: Geometria-Medium;
+        font-size: 60px;
+        color: transparent;
+        -webkit-text-stroke: 1px #000000;
+        top: 26px;
+        right: -15px;
+    }
+    .arrow-left {
+        bottom: -40px;
+        left: -270px;
+        transform: rotate(-45deg);
+    }
+    .arrow-right {
+        bottom: 165px;
+        left: -75px;
+        width: 20px;
+        transform: rotate(135deg);
+    }
+    .header__delta-contour {
+        display: block;
+        width: 23px;
+        height: 32px;
+        background: url("img/delta-contour.png") no-repeat;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
+    .back__delta-black {
+        display: block;
+        position: absolute;
+        width: 23px;
+        height: 32px;
+        background: url("img/delta-black.png") no-repeat;
+        bottom: 309px;
+        right: 10px;
+    }
+}
